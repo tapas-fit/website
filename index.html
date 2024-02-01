@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapas self-improvement app</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Tapas</h1>
+        <h3>I'm building the self-improvement app I always wanted. You might like it too.</h3>
+
+        <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Discord_white.png" height="50" width="50" /></a>
+        <!--<a href="https://discord.gg/YUcS6btXYD"> <img src="img/Twitter_white.png" height="50" width="50" /></a>
+        <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Gmail_white.png" height="50" width="50" /></a>
+        <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Github_white.png" height="50" width="50" /></a> -->
+    </header>
+    <form id="waitlist">
+        <div class="intro">
+            <div>
+                <center>
+                    <p class="c4">
+                        <br />Tapas is a self-improvement app that unifies (and expands on) ideas from habit and gym
+                        workout tracking apps. Screenshots of prototype which is currently under development.
+                    </p>
+                </center>
+            </div>
+            <div>
+                <a href="/img/screen-upnext.png"><img src="img/screen-upnext.png" height="552" /></a>
+                <a href="/img/screen-goals.png"><img src="img/screen-goals.png" height="552" /></a>
+                <a href="/img/screen-exercises.png"><img src="img/screen-exercises.png" height="552" /></a>
+                <a href="/img/screen-rkc-plank.png"><img src="img/screen-rkc-plank.png" height="552" /></a>
+                <a href="/img/screen-programsflows.png"><img src="img/screen-programsflows.png" height="552" /></a>
+            </div>
+        </div>
+        <section class="instruction">
+            <h2>&darr;&nbsp;&nbsp;Select the features you find most important</h2>
+        </section>
+        <section>
+            <label class="container dark">
+                <input type="checkbox" name="want_db"><span class="checkmark"></span></label>
+            <div>
+                <h2>Database of exercises, programs and health protocols</h2>
+                <p>There is a wealth of information online, but it's chaotic.
+                    Tapas aggregates information from multiple sources (including content creators) and pulls up the
+                    needed information right when you need it. (see RKC Plank screenshot)
+                </p>
+            </div>
+
+        </section>
+        <section>
+            <label class="container dark">
+                <input type="checkbox" name="want_oss"><span class="checkmark"></span></label>
+            <div>
+                <h2>Open source</h2>
+                <p>Anyone can copy the app, make improvements, and collaborate in communities.
+                    If official development stops, you are never locked out. The database can freely be used by other
+                    applications.
+                </p>
+            </div>
+
+        </section>
+        <section>
+            <label class="container dark">
+                <input type="checkbox" name="want_variety"><span class="checkmark"></span></label>
+            <div>
+                <h2>Variety is the spice of life</h2>
+                <p>
+                <ul>
+
+                    <li>Mix various forms of workouts (e.g. yoga, weight lifting). Blend in unplanned
+                        activies like skiing or mountain biking. Tapas knows which muscles you worked and adjusts the
+                        program automatically.</li>
+                    <li>Express goals or programs as muscles worked or stretched, Tapas auto-suggests exercises.</li>
+                    <li>Unlike habit trackers, Tapas separates the means from the end. For example, a cardio goal can be
+                        met
+                        by doing cardio sessions, but also by weight lift sets with minimal rest times or a
+                        sauna visit. A thai massage checks off many stretching goals at once.</li>
+                </ul>
+                </p>
+            </div>
+
+        </section>
+        <section>
+            <label class="container dark">
+                <input type="checkbox" name="want_dynamic"><span class="checkmark"></span></label>
+            <div>
+                <h2>Generate dynamic workouts or exercise snacks each day</h2>
+                <ul>
+                    <li>Due to travels, being spontaneous and changing daily schedules and equipment, I cannot stick to
+                        a
+                        predefined workout program.</li>
+                    <li>Tapas follows health advice from experts and suggests full gym sessions or quick
+                        in-between-meetings
+                        exercise snacks or stretches, based on my goals, what my calendar looks like and
+                        muscle recovery needs.</li>
+                    </p>
+            </div>
+
+        </section>
+        <section>
+            <label class="container dark">
+                <input type="checkbox" name="want_goals_management"><span class="checkmark"></span></label>
+            <div>
+                <h2>Goals management</h2>
+                <p>Combine long term goals ("get healthy"), seasonal ("prepare for skiing"), and temporary ("fix
+                    mobility issue") goals.
+                    Rather than a long list of goals (habit trackers) or overly simplified ones (e.g. build muscle vs
+                    fat loss), I want to manage goals in an organized way. Overlaping goals are OK, the app will figure
+                    it out.
+                </p>
+                <!-- comparison between workouts and flows from different creators, shift between influencers/programs. zaf liked that -->
+            </div>
+
+        </section>
+
+        <section>
+            <label class="container dark">
+                <input type="checkbox" name="want_free"><span class="checkmark"></span></label>
+            <div>
+                <h2>Free & no ads</h2>
+                <p>I have no plans or need to monetize tapas. There are no payments, subscriptions, or ads. No
+                    signup/login,
+                    no trials.
+                </p>
+            </div>
+
+        </section>
+
+        <div class="formend">
+            <h1>Get early access!</h1>
+            <h3>Thanks for selecting your favorite features. Enter your email address to submit and be notified when the
+                app launches</h3>
+            <label class="container">I also want to get involved in development of the app and/or database
+                <input type="checkbox" name="want_dev"><span class="checkmark"
+                    style="background-color: #142d4c;"></span></label>
+            <input type="email" placeholder="Your Email" name="email" required>
+            <!-- tapas.fit -->
+            <!-- <div class="cf-turnstile" data-sitekey="0x4AAAAAAAQ29aRZJ1SNKcnf"></div> -->
+            <!-- tapas.test -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAQ7PzYaspMrWbDM"></div>
+            <!-- 
+                1x00000000000000000000AA	Always passes	visible
+                2x00000000000000000000AB	Always blocks	visible
+                1x00000000000000000000BB	Always passes	invisible
+                2x00000000000000000000BB	Always blocks	invisible
+                3x00000000000000000000FF	Forces an interactive challenge	visible
+     
+                <div class="cf-turnstile" data-sitekey="3x00000000000000000000FF"></div>
+            -->
+            <button id="submitbutton" class="btn-ready" type="submit" value="Send">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
+<script language="javascript">
+
+    const form = document.querySelector("#waitlist");
+
+
+    async function sendData() {
+        document.querySelector('#submitbutton').textContent = 'Sending....';
+        const formData = new FormData(form);
+        console.log(formData);
+        try {
+            const response = await fetch("http://tapas.test/waitlist", {
+                method: "POST",
+                body: formData,
+
+            });
+            button = document.querySelector('#submitbutton');
+            if (response.ok) {
+                button.textContent = 'Sent!';
+                button.className = 'btn-ok';
+            } else {
+                button.className = 'btn-err';
+                if (response.status == 401) {
+                    button.textContent = 'Failed. Looks like you are a bot. If this is incorrect, please contact via email or discord';
+                } else {
+                    button.textContent = 'Failed due to an error. Did you submit already? Please try again later or contact via email or discord';
+                }
+            }
+            console.log(await response.json());
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        sendData();
+    });
+</script>

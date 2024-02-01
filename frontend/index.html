@@ -18,8 +18,8 @@
         <h3>I'm building the self-improvement app I always wanted. You might like it too.</h3>
 
         <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Discord_white.png" height="50" width="50" /></a>
-        <!--<a href="https://discord.gg/YUcS6btXYD"> <img src="img/Twitter_white.png" height="50" width="50" /></a>
-        <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Gmail_white.png" height="50" width="50" /></a>
+        <a href="https://twitter.com/Dieter_be"> <img src="img/Twitter_white.png" height="50" width="50" /></a>
+       <!-- <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Gmail_white.png" height="50" width="50" /></a>
         <a href="https://discord.gg/YUcS6btXYD"> <img src="img/Github_white.png" height="50" width="50" /></a> -->
     </header>
     <form id="waitlist">
@@ -142,19 +142,7 @@
                 <input type="checkbox" name="want_dev"><span class="checkmark"
                     style="background-color: #142d4c;"></span></label>
             <input type="email" placeholder="Your Email" name="email" required>
-            <!-- tapas.fit -->
-            <!-- <div class="cf-turnstile" data-sitekey="0x4AAAAAAAQ29aRZJ1SNKcnf"></div> -->
-            <!-- tapas.test -->
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAQ7PzYaspMrWbDM"></div>
-            <!-- 
-                1x00000000000000000000AA	Always passes	visible
-                2x00000000000000000000AB	Always blocks	visible
-                1x00000000000000000000BB	Always passes	invisible
-                2x00000000000000000000BB	Always blocks	invisible
-                3x00000000000000000000FF	Forces an interactive challenge	visible
-     
-                <div class="cf-turnstile" data-sitekey="3x00000000000000000000FF"></div>
-            -->
+            <div class="cf-turnstile" data-sitekey="TURNSTILE-SITEKEY"></div>
             <button id="submitbutton" class="btn-ready" type="submit" value="Send">Submit</button>
         </div>
     </form>
@@ -171,7 +159,7 @@
         const formData = new FormData(form);
         console.log(formData);
         try {
-            const response = await fetch("http://tapas.test/waitlist", {
+            const response = await fetch("BASE-URL/waitlist", {
                 method: "POST",
                 body: formData,
 

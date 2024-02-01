@@ -1,0 +1,6 @@
+vars.secret
+dev-testdata
+deploy-tmp
+deploy-prod.sh
+backend/waitlist-freebsd
+backend/waitlist-linux

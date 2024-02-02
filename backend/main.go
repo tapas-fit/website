@@ -64,26 +64,28 @@ func handlePost(w http.ResponseWriter, r *http.Request, db *DB, ts *turnstile.Tu
 	ip, _, _ := net.SplitHostPort(r.RemoteAddr)
 	resp, err := ts.Verify(tsResponse[0], ip)
 	if err != nil {
-		fmt.Println("POST", r.URL.Path, "Couldn't verify captcha: ", err)
+		fmt.Println("POST", r.URL.Path, "error while verifying captcha: ", err)
 		http.Error(w, "Couldn't verify captcha: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	if resp.Success {
+		fmt.Println("POST", r.URL.Path, "verification success")
 		db.add(r.Form)
 		return
 	}
 	if len(resp.ErrorCodes) == 0 {
-		fmt.Println("POST", r.URL.Path, "internal server error: verify failed without errorcode", resp)
+		fmt.Println("POST", r.URL.Path, "internal server error: verification failed without errorcode", resp)
 		http.Error(w, "verification failed", http.StatusInternalServerError)
 		return
 	}
 	if resp.ErrorCodes[0] == "invalid-input-response" {
-		fmt.Println("POST", r.URL.Path, "invalid-input-response")
+		fmt.Println("POST", r.URL.Path, "verification failed with message: invalid-input-response")
 		http.Error(w, "unauthorized", http.StatusUnauthorized)
 		return
 	}
 
-	// other cases, e.g. timeout-or-duplicate
+	// should only be timeout-or-duplicate
+	fmt.Println("POST", r.URL.Path, "verification failed with message:", resp.ErrorCodes[0])
 	http.Error(w, "verification failed", http.StatusInternalServerError)
 }

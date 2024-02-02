@@ -9,7 +9,6 @@ import (
 	"time"
 
 	"github.com/meyskens/go-turnstile"
-	"github.com/rs/cors"
 )
 
 // TODO: referrer
@@ -38,16 +37,14 @@ func main() {
 		panic(err)
 	}
 
-	http.Handle("/", cors.Default().Handler(
-		http.HandlerFunc(
-			func(w http.ResponseWriter, r *http.Request) {
-				if r.Method == "POST" {
-					handlePost(w, r, db, ts)
-				} else {
-					http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-				}
-			},
-		),
+	http.Handle("/", http.HandlerFunc(
+		func(w http.ResponseWriter, r *http.Request) {
+			if r.Method == "POST" {
+				handlePost(w, r, db, ts)
+			} else {
+				http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+			}
+		},
 	),
 	)
 	err = http.ListenAndServe(addr, nil)

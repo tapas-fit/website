@@ -14,6 +14,12 @@ Landing page for tapas app with waitlist
 * mp4 is about half the size of webm, so mp4 it is then..
 * but kdenlive always wants to save as full HD , and not sure how to fit the portrait into the webpage anyway. let's go with row of screenshots for now, which i can fit into the layout in a nicer way
 
+### favicon
+
+made with https://favicon.io/favicon-generator/
+backgroudn #0AA
+font: Leckerli One
+
 ## backend
 
 simple go backend to save signups to csv files

@@ -1,6 +1,2 @@
-github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
-github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/meyskens/go-turnstile v0.0.0-20230622160222-89160e594ca1 h1:lGjDY7OC1VfMpuVUN+b59vPPepbPx/eJQXGqpM2pCdw=
 github.com/meyskens/go-turnstile v0.0.0-20230622160222-89160e594ca1/go.mod h1:YbEb1gFAr7w2NcabqA2aPAeyW4Mhf85fmt+vVrrLo4s=
-github.com/rs/cors v1.10.1 h1:L0uuZVXIKlI1SShY2nhFfo44TYvDPQ1w4oFkUJNfhyo=
-github.com/rs/cors v1.10.1/go.mod h1:XyqrcTp5zjWr1wsJ8PIRZssZ8b/WMcMf71DJnit4EMU=

@@ -35,6 +35,8 @@ li {
 
 a {
     color: #4CAF50;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 body {
@@ -96,12 +98,10 @@ h3 {
     padding: 30px;
 }
 
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+.right {
+    float: right;
+    padding-right: 24px;
+  }
 
 .formend {
     flex-direction: column;
@@ -119,6 +119,7 @@ button {
     padding: 10px;
     cursor: pointer;
     border: none;
+    font-size: 22px;
 }
 
 .btn-ready {
